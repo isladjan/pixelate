@@ -4,6 +4,8 @@ Image pixelation effect when image first displayed on the screen. The animation 
 
 Take a peek at [demo](https://isladjan.com/lab/pixelate/)
 
+https://github.com/user-attachments/assets/b2db4e6a-b9a8-40c6-a5d0-a4c62b763a2f
+
 This effect is inspired by this website: [davidanthonychenault.com](https://www.davidanthonychenault.com/)
 <br />
 

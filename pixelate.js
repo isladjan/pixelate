@@ -1,7 +1,7 @@
 // Three.js pixelate effect - https://github.com/isladjan/pixelate
 'use strict';
 
-// The pixelation factor values determine the level of pixelation at each step of the effect
+
 let pixelIndex = 0,
   canvasImages = [];
 let steps, duration, effectWrap, originalImg, canvasWrap, canvas, ctx, imgRatio, isAnimationActive, timeout;
@@ -9,7 +9,9 @@ let steps, duration, effectWrap, originalImg, canvasWrap, canvas, ctx, imgRatio,
 
 export default class Pixelate {
   constructor(el, obj) {
-    if(!obj?.steps) steps = [0.5, 1, 3, 2, 4, 5, 5.5, 6, 7, 10, 20, 10, 40, 80];
+    // The pixelation factor values determine the level of pixelation at each step of the effect
+    //smaller values represent larger pixels
+    if(!obj?.steps) steps = [0.5, 1, 3, 2, 4, 2, 5.5, 6, 7, 10, 20, 40, 80];
     else steps = obj.steps;
 
     if(!obj?.timeBetweenSteps) duration = 120;

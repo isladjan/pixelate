@@ -1,6 +1,6 @@
 # Image Pixelation Effect
 
-Image pixelation effect when image first displayed on the screen. The animation works by pixelating the image in steps, which can be customized. A JS canvas is used for rendering.
+This project applies an image pixelation effect when the image first appears on the screen. The animation progressively pixelates the image in customizable steps, creating a dynamic visual transition. Rendering is performed using a JavaScript canvas.
 
 Take a peek at [demo](https://isladjan.com/lab/pixelate/)
 

@@ -1,0 +1,231 @@
+@font-face {
+  font-family: 'departureMono';
+  src: url('departureMono-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+/* Reset */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  font-weight: 400;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+:where(a) {
+  text-decoration: none;
+  color: var(--color-black);
+}
+
+:where(canvas) {
+  display: block;
+}
+
+/* Root Styles */
+:root {
+  font-family: 'departureMono', system-ui, 'Courier New', 'Courier', monospace;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #242424;
+  display: grid;
+  grid-template-columns: repeat(1fr, 2);
+  grid-template-areas: "effect, links";
+  caret-color: transparent;
+}
+
+
+/* main effect */
+.effect-container {
+  position: relative;
+  grid-area: effect;
+  width: 100svw;
+  height: 100svh;
+
+  .pixel-img-wrapper {
+    position: absolute;
+    inset: 100px;
+    overflow: hidden;
+  }
+
+  img.pixel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    transform-origin: 50% 50%;
+    scale: 1.1;
+  }
+
+  .canvas-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  canvas {
+    transform-origin: 50% 50%;
+    scale: 1.1;
+  }
+
+  .btn {
+    position: absolute;
+    z-index: 2;
+    bottom:30px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-transform: uppercase;
+    font-family: 'departureMono', 'Courier New', 'Courier', monospace;
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    border: none;
+    background-color: #fff;
+    color: #242424;
+    border-radius: 3px;
+    transition: color 0.3s;
+  }
+
+  .btn:hover {
+    cursor: pointer;
+    color: red;
+  }
+
+}
+
+
+/* styling of other auxiliary elements that are not related to the effect */
+.link-constainer {
+  --margin: 20px;
+  grid-area: links;
+  height: 100%;
+  mix-blend-mode: difference;
+
+  .top {
+    position: absolute;
+    top: var(--margin);
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--margin);
+
+    h1 {
+      margin: 0;
+      font-size: 1.2rem;
+      font-weight: 400;
+      line-height: 1;
+      text-transform: uppercase;
+
+      span {
+        position: relative;
+        top: -7px;
+      }
+
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    .original-link {
+      text-transform: uppercase;
+    }
+  }
+
+  .bottom {
+    position: absolute;
+    bottom: calc(var(--margin) - 5px);
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 var(--margin);
+
+    .gitHub {
+
+      svg {
+        position: relative;
+        top: 5px;
+      }
+
+    }
+
+    .copyright {
+      text-transform: uppercase;
+      font-size: .9rem;
+
+      .sign {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1.4rem;
+        position: relative;
+        top: 2px;
+        margin-right: 5px;
+        line-height: .5;
+      }
+    }
+  }
+
+  a {
+    transition: color 0.3s;
+  }
+
+  a:hover {
+    color: rgb(243, 140, 67);
+  }
+
+}
+
+@media (max-width: 1000px) {
+  .effect-container .pixel-img-wrapper {
+    inset: 70px 30px;
+  }
+}
+
+@media (max-width: 390px) {
+  .link-constainer .original-link {
+    display: none;
+  }
+}

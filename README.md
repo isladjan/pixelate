@@ -35,14 +35,15 @@ import  Pixelate  from '../pixelate.js'
 const img = document.querySelector('.image-for-pixelate');
 new Pixelate( img );
 
-//additional settings
+// additional settings
 new Pixelate( 
     img, 
     {
-        //the pixel size for each step - smaller values represent larger pixels (default: [0.5, 1, 3, 2, 4, 2, 5.5, 6, 7, 10, 20, 40, 80])
+        // the pixel size for each step - smaller values represent larger pixels
+        // defaul: [0.5, 1, 3, 2, 4, 2, 5.5, 6, 7, 10, 20, 40, 80])
         steps: [1, 2, 3, 50, 60, 80, 100],
 
-        //ms (default: 100)
+        // ms (default: 100)
         timeBetweenSteps: 200                
     } );
 

@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'departureMono';
+  font-family: 'departure-mono';
   src: url('departureMono-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
@@ -51,7 +51,8 @@ li {
 
 /* Root Styles */
 :root {
-  font-family: 'departureMono', system-ui, 'Courier New', 'Courier', monospace;
+  --font1: 'departure-mono', system-ui, 'Courier New', 'Courier', monospace;
+  font-family: var(--font1);
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light dark;
@@ -116,7 +117,8 @@ body {
     left: 50%;
     transform: translateX(-50%);
     text-transform: uppercase;
-    font-family: 'departureMono', 'Courier New', 'Courier', monospace;
+    //font-family: 'departureMono', 'Courier New', 'Courier', monospace;
+    font-family: var(--font1);
     font-size: 1.1rem;
     padding: 5px 10px;
     border: none;
@@ -148,7 +150,6 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 0 var(--margin);
 
     h1 {
@@ -171,12 +172,14 @@ body {
 
     .original-link {
       text-transform: uppercase;
+      position: relative;
+      top: 3px;
     }
   }
 
   .bottom {
     position: absolute;
-    bottom: calc(var(--margin) - 5px);
+    bottom: calc(var(--margin) - 10px);
     left: 0;
     width: 100%;
     display: flex;
@@ -190,7 +193,6 @@ body {
         position: relative;
         top: 5px;
       }
-
     }
 
     .copyright {
@@ -224,8 +226,32 @@ body {
   }
 }
 
-@media (max-width: 390px) {
-  .link-constainer .original-link {
-    display: none;
+@media (max-width: 500px) {
+  .link-constainer .top {
+    h1  {
+       font-size: 1.1rem;
+    }
+
+    .original-link {
+      font-size: .9rem;
+      top:7px;
+    }
   }
+}
+
+@media (max-width: 420px) {
+
+  .link-constainer {
+    .original-link {
+      display: none;
+    }
+
+    .bottom {
+
+      a {
+        font-size: .9rem;
+      }
+    }
+  }
+
 }

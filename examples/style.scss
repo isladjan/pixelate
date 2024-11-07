@@ -111,26 +111,30 @@ body {
   }
 
   .btn {
+    cursor: none;
     position: absolute;
     z-index: 2;
-    bottom:30px;
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
     text-transform: uppercase;
-    //font-family: 'departureMono', 'Courier New', 'Courier', monospace;
-    font-family: var(--font1);
+    font-family: var(--font3);
     font-size: 1.1rem;
     padding: 5px 10px;
     border: none;
-    background-color: #fff;
-    color: #242424;
+    background: #cccccc;
+    color: #222222;
     border-radius: 3px;
-    transition: color 0.3s;
+    transition: background 0.3s;
   }
 
   .btn:hover {
-    cursor: pointer;
-    color: red;
+    background: #ffffff;
+  }
+
+  .btn:active {
+    transform-origin: 0% 50%;
+    scale: 1.1;
   }
 
 }

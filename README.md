@@ -4,7 +4,7 @@ This project applies an image pixelation effect when the image first appears on 
 
 Take a peek at [demo](https://isladjan.com/lab/pixelate/)
 
-https://github.com/user-attachments/assets/b2db4e6a-b9a8-40c6-a5d0-a4c62b763a2f
+https://github.com/user-attachments/assets/9138bfd4-1c64-416c-bb9c-2ac4261814bf
 
 This effect is inspired by this website: [davidanthonychenault.com](https://www.davidanthonychenault.com/)
 <br />
